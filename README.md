@@ -1,5 +1,5 @@
 # Filter-Object--Trackers
-测试和学习OpenCV自带的视频追踪器效果
+测试和学习OpenCV自带的视频追踪器效果，测试环境为OpenCV 3.4.7 + contrib模块
 # 各个算法特征介绍
 ## MOSSE
 [CVPR2010跟踪算法MOSSE原理及代码解析](https://blog.csdn.net/qq_17783559/article/details/82254996)  
