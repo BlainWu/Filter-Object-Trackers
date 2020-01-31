@@ -1,3 +1,138 @@
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+////
+////
+//////
+////
+////
+////
+////
+////
+////
+////
+//
+////
+////
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+////
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+
+
+
+
+
+
 #include <opencv2/core/utility.hpp>
 #include <opencv2/tracking.hpp>
 #include <opencv2/videoio.hpp>
@@ -53,6 +188,11 @@ int main( int argc, char** argv ){
             tracker= TrackerMOSSE::create();
             break;
         }
+        case 7 :{
+           cout<<"已选择MediaFlow"<<endl;
+           tracker= TrackerMedianFlow::create();
+           break;
+       }
         default:{
             cout<<"没有正确选择算法"<<endl;
             return 0;
@@ -73,7 +213,8 @@ int main( int argc, char** argv ){
     while(cap.isOpened()){
         // get frame from the video
         cap >> frame;
-        // stop the program if no more images
+        // stop the program if no more images7
+
         if(frame.rows==0 || frame.cols==0)
             break;
         // update the tracking result
